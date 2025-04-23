@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <H2>    4 - FERRAMENTAS TI ULTILIZADAS NA BIBLIOTECA ANA BOVE</H2>
+        <h3>4.1  Sobre a biblioteca Ana Bove e sua instituição mantenedora</h3>
+        <h4>4.1.1 O Imip</h4>
+        <h4>4.1.2 A Biblioteca Ana Bove</h4>
+        <h3>4.2 Diagnostico tecnológico da Biblioteca Ana Bove</h3>
+        <hr>
+        <br>
+    <h1>Principais formatações</h1>
+    <br>
+    <h2>Negrito / Destaque</h2>
+        <p>Nesta frase temos uma <b>parte do texto em negrito</b> usando a tag B (não semântica)</p>
+        <p>Nesta frase temos uma <strong>parte do texto em negrito</strong> usando a tag strong (Com semântica)</p>
+    <h1>Itálico / Ênfase</h1>
+        <p>Nesta frase vamos entrar com uma palavra em <i>Itálico</i> usando a tag i (não semântica)</p>
+        <p>Nesta frase vamos entrar com uma palavra em <em>Itálico</em> usando a tag i (com semântica)</p>
+    <h2>Texto Marcador</h2>
+        <P>Aqui vamos usar um texto com destaque <mark style="background:Green">de marcador de texto</mark> usando mark</P>
+        <P>Aqui vamos usar um texto com destaque <mark style="background:yellow">de marcador de texto</mark> usando mark</P>
+    <h2>Texto Grande e Pequeno</h2>,
+        <p>Estamos trabalhando aqui com um <big>texto grande</big> e um texto <small>pequeno</small> nesta frase</p>
+    <h2>Texto detelado</h2>
+        <p>Nesta frase vamos trabalhar com um texto <del>que foi excluido</del> da frase (forma semantica)</p>
+    <h2>Texto inserido</h2>
+        <p>Nesta frase vamos demonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica</p>
+        <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semântica</p>
+    <h2>Texto sobrescrito</h2>
+        <p>Vamos demonstrar uma formula de equação do segundo grau ax<sup>2</sup> + bx c = 0</p>
+    <h2>Texto Subescrito</h2>
+        <p> Vamos demonstrar um texto subscrito com a formula da agua H<sub>2</sub>O</p>
+    <h2>Trecho de Código fonte</h2>
+        <p>Neste exemplo vou demonstrar um trecho de código
+            <pre> <code></p>
+                <pre>
+                    <code>
+                        import numpy as np
+            import pandas as pd
+            
+            # Função para detectar e remover outliers com base no IQR (Intervalo Interquartil)
+            def remove_outliers(df):    
+                # Calcular os quartis Q1 (25%) e Q3 (75%)
+                Q1 = df.quantile(0.25)
+                Q3 = df.quantile(0.75)
+                
+                # Calcular o intervalo interquartil (IQR)
+                IQR = Q3 - Q1
+                
+                # Definir limites inferior e superior para os dados
+                lower_limit = Q1 - 1.5 * IQR
+                upper_limit = Q3 + 1.5 * IQR
+                
+                # Filtrar os dados, removendo os outliers
+                filtered_df = df[(df >= lower_limit) & (df <= upper_limit)]
+                
+                # Remover linhas com valores NaN (resultantes de valores fora dos limites)
+                filtered_df = filtered_df.dropna()
+                
+                return filtered_df
+            
+            # Exemplo de dados com outliers
+            data = {
+                'coluna1': [10, 12, 14, 100, 15, 16, 18, 20, 25, 30],
+                'coluna2': [1, 3, 4, 5, 1000, 6, 7, 8, 9, 10]
+            }
+            
+            # Criar DataFrame
+            df = pd.DataFrame(data)
+            
+            # Mostrar dados originais
+            print("Dados originais:")
+            print(df)
+            
+            # Remover outliers
+            df_sem_outliers = remove_outliers(df)
+            
+            # Mostrar dados após remoção de outliers
+            print("\nDados após remoção de outliers:")
+            print(df_sem_outliers)
+            
+                    </code>
+                </pre>
+                <br>
+    <h2>Citações (quotation) simples</h2>
+        <p>Segundo Steve Jobs <q>A técnologia move o mundo</q></p>
+    <h2>Citações completas (livros)</h2>
+        <p>trecho do livro o pequeno príncipe</p> <blockquote> Todas as pessoas grandes foram um dia crianças – mas poucas se lembram disso. <cite>O pequeno Príncipe</cite> </blockquote> 
+        <br>
+    <h2>Abreviações</h2>
+        <p>Estamos estudando <abbr title="Hiper text Markup Lenguage">HTML</abbr> e <abbr title="Cascate Style Sheet">CSS</abbr></p>
+        <br>
+    <h2>Texto invertido</h2>
+        <p>Estou estudando HTML</p>
+        <p><bdo dir="rtl">Estou estudando HTML</bdo></p>
+</body>
+</html>
